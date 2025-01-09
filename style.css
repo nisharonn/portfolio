@@ -1,0 +1,45 @@
+body {
+    /* Set line height to 1.5 times the font size
+         and use the OS’s UI font as the website font
+       */
+    font: 100%/1.5 system-ui;
+  }
+
+#header {
+    align-items: center;
+    text-align: center
+}
+
+#resume-body h2, #resume-body h3 {
+    margin: 0;
+}
+
+.bleft {
+    float: left; 
+    font-weight: bold; 
+}
+  
+.bright {
+    float: right;
+    font-weight: bold; 
+}
+
+.ileft {
+    float: left; 
+    font-style: italic; 
+}
+
+.iright {
+    float: right;
+    font-style: italic; 
+}
+
+ul {
+    margin: 0;  
+}
+  
+
+
+
+
+  

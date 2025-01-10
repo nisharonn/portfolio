@@ -37,7 +37,10 @@ body {
 ul {
     margin: 0;  
 }
-  
+
+nav a {
+    margin: 0 10px;
+}
 
 
 

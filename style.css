@@ -3,7 +3,18 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
-  }
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 20px;
+}
+
+:root {
+    --color-accent: #ead1db;
+}
+
+html {
+    accent-color: var(--color-accent);
+}
 
 #header {
     align-items: center;
@@ -38,11 +49,74 @@ ul {
     margin: 0;  
 }
 
-nav a {
-    margin: 0 10px;
+nav {
+    display: flex;
+    margin-bottom: 8px;
+    border-bottom: 1px solid oklch(80% 3% 200);
+
+    ul {
+        display: contents;
+    }
+    li {
+        display: contents;
+    }
+    a {
+        flex: 1;
+        text-decoration: none;
+        color: inherit;
+        text-align: center;
+        padding: 0.5em;
+    }
+
+    a:hover {
+        border-bottom: 0.4em solid var(--color-accent);
+        padding-bottom: 5px;
+        background-color: #f7edf2;
+    }
+}
+
+a.current {
+    border-bottom: 0.4em solid oklch(86% 0.012% 215);
+    padding-bottom: 5px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column: 1 / -1;
+    gap: 1em;
 }
 
 
+button {
+    grid-column: 1 / -1;
+}
 
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    
+}
 
-  
+article {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: 1em;
+    padding: 10px;
+
+    h2 {
+        margin: 0;
+    }
+    
+}
+
+h1 {
+    font-size: 350%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    text-wrap: balance;
+
+}

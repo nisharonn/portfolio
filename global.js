@@ -36,8 +36,9 @@ for (let p of pages) {
     a.textContent = title;
     nav.append(a)
 
-    console.log(url)
-    console.log(location.host)
+    console.log(ARE_WE_HOME);
+    console.log(url);
+    console.log(a.href);
 
     if (a.host === location.host && a.pathname === location.pathname) {
         a.classList.add('current');

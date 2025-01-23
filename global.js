@@ -29,12 +29,14 @@ document.body.prepend(nav)
 for (let p of pages) {
     let url = p.url;
     let title = p.title;
-    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url + 'index.html': url;
 
     let a = document.createElement('a');
     a.href = url;
     a.textContent = title;
     nav.append(a)
+
+    console.log(url)
 
     if (a.host === location.host && a.pathname === location.pathname) {
         a.classList.add('current');

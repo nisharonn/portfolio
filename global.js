@@ -29,7 +29,7 @@ document.body.prepend(nav)
 for (let p of pages) {
     let url = p.url;
     let title = p.title;
-    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url + 'index.html': url;
+    url = !ARE_WE_HOME && !url.startsWith('http') ? 'portfolio/' + url : url;
 
     let a = document.createElement('a');
     a.href = url;
@@ -37,11 +37,11 @@ for (let p of pages) {
     nav.append(a)
 
     console.log(url)
+    console.log(location.host)
 
     if (a.host === location.host && a.pathname === location.pathname) {
         a.classList.add('current');
     }
-
     if (a.host != location.host) {
         a.target = '_blank';
     }

@@ -1,0 +1,74 @@
+[
+    {
+        "title": "NorCal vs. SoCal: How do SF and SD Compare in Sunshine and Rain?",
+        "year": "2025",
+        "image": "dsc106_project1.png",
+        "description": "A visualization comparing the striking weather patterns between two California cities. This visualization was created using Tableau to highlight the differences in sunshine hours and rainfall between San Francisco and San Diego in a given year."
+    },
+    {
+        "title": "Predicting Apartment Rent Prices: Analyzing Real Estate Trends in the US",
+        "year": "2024",
+        "image": "rent.jpg",
+        "description": "Predicting apartment rent prices in the U.S. using a Random Forest classifier in R. Explored key features such as location, number of bedrooms, bathrooms, square footage, amenities, and pet policies."
+    },
+    {
+        "title": "Air Pollution Prediction Project",
+        "year": "2024", 
+        "image": "pollution.jpg",
+        "description": "An analysis to identify trends and features significantly correlated with annual air pollution levels. Developed a Random Forest model with feature transformations and hyperparameter tuning, achieving an R² of 65.1% to explain the majority of variance in the dataset."
+    },
+    {
+        "title": "Biomarker Evaluation for THC Detection",
+        "year": "2024",
+        "image": "thc.jpg",
+        "description": "An analysis to identify the optimal compound, matrix, and cutoff for detecting recent THC use. Used R to perform data cleaning, exploratory analysis, and statistical modeling, and employed ROC curves to determine cutoff value that maximized both sensitivity and specificity."
+    },
+    {
+        "title": "Recipe Analysis Project",
+        "year": "2024",
+        "image": "recipe.jpg",
+        "description": "Analyzed features of recipes from food.com to identify factors that correlate with high ratings, including the number of steps, directions, and description length. Performed data cleaning, EDA, hypothesis testing, and developed a Random Forest Classifier model to predict recipe ratings."
+    },
+    {
+        "title": "Trolley Crime Analysis",
+        "year": "2024",
+        "image": "trolley.jpg",
+        "description": "An analysis of crime rates at San Diego MST Blue Line Trolley stops, comparing La Jolla and non-La Jolla regions to identify key patterns. The project included data cleaning, EDA, and statistical tests to explore correlations between crime rates, home values, and police station proximity."
+    },
+    {
+        "title": "",
+        "year": "2023",
+        "image": "",
+        "description": ""
+    },
+    {
+        "title": "",
+        "year": "2023",
+        "image": "",
+        "description": ""
+    },
+    {
+        "title": "",
+        "year": "2023",
+        "image": "",
+        "description": ""
+    },
+    {
+        "title": "",
+        "year": "2022",
+        "image": "",
+        "description": ""
+    },
+    {
+        "title": "",
+        "year": "2022",
+        "image": "",
+        "description": ""
+    },
+    {
+        "title": "",
+        "year": "2022",
+        "image": "",
+        "description": ""
+    }
+]

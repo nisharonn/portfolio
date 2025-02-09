@@ -8,10 +8,7 @@ let query = '';
 let selectedIndex = -1;
 let searchInput = document.querySelector('.searchBar');
 
-// re-calculate rolled data
 let newRolledData = d3.rollups(projects, (v) => v.length, (d) => d.year);
-
-// re-calculate data
 let newData = newRolledData.map(([year, count]) => {
   return { value: count, label: year }; 
 });
@@ -38,10 +35,18 @@ searchInput.addEventListener('input', (event) => {
   // render filtered projects
   projectsContainer.innerHTML = '';
   renderProjects(filteredProjects, projectsContainer, 'h2');
-  renderPieChart(filteredProjects); 
+  renderPieChart(filteredProjects);
   });
 
 function renderPieChart(projectsGiven) {
+
+// re-calculate rolled data
+let newRolledData = d3.rollups(projectsGiven, (v) => v.length, (d) => d.year);
+
+// re-calculate data
+let newData = newRolledData.map(([year, count]) => {
+  return { value: count, label: year }; 
+});
   
   // re-calculate slice generator, arc data, arc, etc.
   let newSliceGenerator = d3.pie().value((d) => d.value);;

@@ -157,4 +157,82 @@ select {
     font-weight: bold;
 }
   
+
+.project-year {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin-top: auto;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#projects-pie-plot {
+    max-width: 20em;
+    margin-block: 2em;
+    overflow: visible;
+}
+
+.legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10em, auto));
+    gap: 1em;
+    border: 2px solid #ddd; 
+    padding: 10px; 
+    border-radius: 8px; 
+    flex: 1;
+}
+
+.legend-color {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.swatch {
+    width: 18px;
+    height: 18px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color);
+    display: inline-flex; 
+    border-radius: 50%; 
+} 
+
+.legend-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 2em;
+
+}
   
+&:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+}
+
+path {
+    transition: 300ms;
+}
+
+.selected {
+  --color: oklch(92.65% 0.0888 88.88) !important; /* Distinct color for selection */
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
+
+path {
+    cursor: pointer;
+}
+
+.legend li {
+  list-style-type: none;
+}
+
+

@@ -1,13 +1,3 @@
-body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    font: 100%/1.5 system-ui;
-    max-width: 1000px;
-    margin-inline: auto;
-    padding: 35px;
-}
-
 :root {
     --color-accent: #ead1db;
 }
@@ -17,64 +7,60 @@ html {
     color-scheme: light dark;
 }
 
-#header {
-    align-items: center;
-    text-align: center
+body {
+    font: 100%/1.5 system-ui;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 35px;
+}
+
+/* headings */
+h1 {
+    font-size: 350%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    text-wrap: balance;
 }
 
 #resume-body h2, #resume-body h3 {
     margin: 0;
 }
 
-.bleft {
-    float: left; 
-    font-weight: bold; 
-}
-  
-.bright {
-    float: right;
-    font-weight: bold; 
+#header {
+    align-items: center;
+    text-align: center;
 }
 
-.ileft {
-    float: left; 
-    font-style: italic; 
-}
-
-.iright {
-    float: right;
-    font-style: italic; 
-}
-
-ul {
-    margin: 0;  
-}
-
+/* navigation */
 nav {
     --border-color: oklch(50% 10% 200 / 40%);
     display: flex;
     margin-bottom: 8px;
     border-bottom: 1px solid var(--border-color);
+}
 
-    ul {
-        display: contents;
-    }
-    li {
-        display: contents;
-    }
-    a {
-        flex: 1;
-        text-decoration: none;
-        color: inherit;
-        text-align: center;
-        padding: 0.5em;
-    }
+nav ul {
+    display: contents;
+}
 
-    a:hover {
-        border-bottom: 0.4em solid var(--color-accent);
-        padding-bottom: 5px;
-        background-color: color-mix(in oklch, var(--color-accent), canvas 85%);;
-    }
+nav li {
+    display: contents;
+}
+
+nav a {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 0.5em;
+}
+
+nav a:hover {
+    border-bottom: 0.4em solid var(--color-accent);
+    padding-bottom: 5px;
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 a.current {
@@ -82,6 +68,7 @@ a.current {
     padding-bottom: 5px;
 }
 
+/* form */
 form {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -89,11 +76,56 @@ form {
     gap: 1em;
 }
 
-
 button {
     grid-column: 1 / -1;
 }
 
+label.color-scheme {
+    position: absolute;
+    top: 0.8em;
+    right: 0.8em;
+    font-size: 80%;
+}
+
+select {
+    font-size: 80%;
+    font-family: inherit;
+}
+
+/* resume */
+.bleft, .bright {
+    font-weight: bold;
+}
+
+.bleft {
+    float: left;
+}
+
+.bright {
+    float: right;
+}
+
+.ileft, .iright {
+    font-style: italic;
+}
+
+.ileft {
+    float: left;
+}
+
+.iright {
+    float: right;
+}
+
+ul {
+    margin: 0;
+}
+
+.legend li {
+    list-style-type: none;
+}
+
+/* projects */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -106,86 +138,16 @@ article {
     grid-row: span 3;
     gap: 1em;
     padding: 10px;
+}
 
-    h2 {
-        margin: 0;
-    }
-    
+article h2 {
+    margin: 0;
 }
 
 article img {
-    width: 100%;    
+    width: 100%;
     height: 200px;
     object-fit: cover;
-}
-
-
-h1 {
-    font-size: 350%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    line-height: 1.1;
-    text-wrap: balance;
-
-}
-
-label.color-scheme {
-    position: absolute;
-    top: 0.8em;;
-    right: 0.8em;
-    font-size: 80%;
-}
-
-select {
-    font-size: 80%;
-    font-family: inherit;
-}
-
-#profile-stats dl {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr); 
-    gap: 10px; 
-}
-  
-#profile-stats dt, #profile-stats dd {
-    grid-column: span 1; 
-    margin: 0;
-}
-  
-#profile-stats dt {
-    font-weight: bold;
-}
-
-#stats {
-
-    background-color: rgba(245, 245, 245, 0.222);
-    padding: 10px;
-    border-radius: 22px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-    dl {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); 
-        gap: 10px; 
-        justify-items: center; 
-    }
-
-    dt {
-        font-weight: bold;
-        grid-row: 1;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 0.8em;
-        color: #888;
-    }
-
-    dd {
-        grid-row: 2; 
-        margin: 0;
-        text-align: center;
-        font-size: 1.5em;
-    }
 }
 
 .project-year {
@@ -200,6 +162,38 @@ select {
     flex-grow: 1;
 }
 
+/* stats */
+.stats, #language-breakdown {
+    background-color: rgba(245, 245, 245, 0.222);
+    padding: 10px;
+    border-radius: 22px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stats dl, #language-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.stats dt, #language-breakdown dt {
+    font-weight: bold;
+    grid-row: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.stats dd {
+    grid-row: 2;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* pie chart and legend */
 #projects-pie-plot {
     max-width: 20em;
     margin-block: 2em;
@@ -210,9 +204,9 @@ select {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10em, auto));
     gap: 1em;
-    border: 2px solid #ddd; 
-    padding: 10px; 
-    border-radius: 8px; 
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
     flex: 1;
 }
 
@@ -227,55 +221,23 @@ select {
     height: 18px;
     aspect-ratio: 1 / 1;
     background-color: var(--color);
-    display: inline-flex; 
-    border-radius: 50%; 
-} 
+    display: inline-flex;
+    border-radius: 50%;
+}
 
 .legend-container {
     display: flex;
     align-items: center;
     flex: 1;
     gap: 2em;
-
-}
-  
-&:has(path:hover) {
-    path:not(:hover) {
-      opacity: 0.5;
-    }
 }
 
-path {
-    transition: 300ms;
-}
-
-.selected {
-  --color: oklch(92.65% 0.0888 88.88) !important; /* Distinct color for selection */
-}
-
-.selected:is(path) {
-  fill: var(--color);
-}
-
-path {
-    cursor: pointer;
-}
-
-.legend li {
-  list-style-type: none;
-}
-
-.gridlines {
-    opacity: 0.12
-}
-
+/* tooltip */
 #commit-tooltip {
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: flex-start; 
     gap: 0.2em;
-    justify-items: flex-start; 
+    justify-items: flex-start;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-radius: 5px;
@@ -283,22 +245,21 @@ path {
     backdrop-filter: blur(5px);
     transition-duration: 500ms;
     transition-property: opacity, visibility;
+}
 
-    dt {
-        font-weight: bold;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 0.8em;
-        color: #888;
-        text-align: left;
-        margin: 0;
-    }
+#commit-tooltip dt {
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #888;
+    margin: 0;
+}
 
-    dd {
-        margin: 0;
-        text-align: left;
-        font-size: 1em;
-    }
+#commit-tooltip dd {
+    margin: 0;
+    text-align: left;
+    font-size: 1em;
 }
 
 .info-tooltip {
@@ -312,22 +273,44 @@ dl.info-tooltip[hidden]:not(:hover, :focus-within) {
     visibility: hidden;
 }
 
+/* animinations */
 circle {
     transition: 200ms;
     transform-origin: center;
     transform-box: fill-box;
 }
-  
+
 circle:hover {
     transform: scale(1.5);
 }
 
+path {
+    transition: 300ms;
+    cursor: pointer;
+}
+
+&:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+}
+
+.selected {
+    --color: oklch(92.65% 0.0888 88.88) !important;
+}
+
+.selected:is(path) {
+    fill: var(--color);
+}
+
+circle.selected {
+    fill: #ff6b6b;
+}
+
 @keyframes marching-ants {
     to {
-      stroke-dashoffset: -8; /* 5 + 3 */
+        stroke-dashoffset: -8;
     }
 }
-  
+
 .selection {
     fill-opacity: 0.1;
     stroke: black;
@@ -336,8 +319,7 @@ circle:hover {
     animation: marching-ants 2s linear infinite;
 }
 
-circle.selected {
-    fill: #ff6b6b;
+/* scatter plot */
+.gridlines {
+    opacity: 0.12;
 }
-
-

@@ -16,7 +16,7 @@ async function loadLatestProjects() {
 loadLatestProjects();
 
 const githubData = await fetchGitHubData('nisharonn');
-const profileStats = document.querySelector('#profile-stats');
+const profileStats = document.querySelector('.stats');
 if (profileStats) {
     profileStats.innerHTML = `
           <dl>

@@ -132,27 +132,27 @@ function createScatterplot() {
     xScale.range([usableArea.left, usableArea.right]);
     yScale.range([usableArea.bottom, usableArea.top]);
 
-        const gridlines = svg
-        .append('g')
-        .attr('class', 'gridlines')
-        .attr('transform', `translate(${usableArea.left}, 0)`);
+    const gridlines = svg
+      .append('g')
+      .attr('class', 'gridlines')
+      .attr('transform', `translate(${usableArea.left}, 0)`);
 
     gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
 
     const xAxis = d3.axisBottom(xScale);
     const yAxis = d3
-        .axisLeft(yScale)
-        .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');
+      .axisLeft(yScale)
+      .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');
 
     svg
-    .append('g')
-    .attr('transform', `translate(0, ${usableArea.bottom})`)
-    .call(xAxis);
+      .append('g')
+      .attr('transform', `translate(0, ${usableArea.bottom})`)
+      .call(xAxis);
 
     svg
-    .append('g')
-    .attr('transform', `translate(${usableArea.left}, 0)`)
-    .call(yAxis);
+      .append('g')
+      .attr('transform', `translate(${usableArea.left}, 0)`)
+      .call(yAxis);
 
     const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
     const rScale = d3
@@ -195,6 +195,7 @@ function updateTooltipContent(commit) {
   
     link.href = commit.url;
     link.textContent = commit.id;
+    
     author.textContent = commit.author;
     date.textContent = commit.datetime?.toLocaleString('en', {
       dateStyle: 'full',
@@ -239,7 +240,8 @@ function isCommitSelected(commit) {
   }
   const min = { x: brushSelection[0][0], y: brushSelection[0][1] }; 
   const max = { x: brushSelection[1][0], y: brushSelection[1][1] }; 
-  const x = xScale(commit.date); const y = yScale(commit.hourFrac); 
+  const x = xScale(commit.date); 
+  const y = yScale(commit.hourFrac); 
   return x >= min.x && x <= max.x && y >= min.y && y <= max.y; 
 }
 

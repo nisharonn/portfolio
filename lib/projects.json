@@ -27,7 +27,8 @@
         "title": "Recipe Analysis Project",
         "year": "2024",
         "image": "recipe.jpg",
-        "description": "Analyzed features of recipes from food.com to identify factors that correlate with high ratings, including the number of steps, directions, and description length. Performed data cleaning, EDA, hypothesis testing, and developed a Random Forest Classifier model to predict recipe ratings."
+        "description": "Analyzed features of recipes from food.com to identify factors that correlate with high ratings, including the number of steps, directions, and description length. Performed data cleaning, EDA, hypothesis testing, and developed a Random Forest Classifier model to predict recipe ratings.",
+        "url": "https://nisharonn.github.io/recipe-analysis/"
     },
     {
         "title": "Trolley Crime Analysis",
@@ -36,10 +37,11 @@
         "description": "An analysis of crime rates at San Diego MST Blue Line Trolley stops, comparing La Jolla and non-La Jolla regions to identify key patterns. The project included data cleaning, EDA, and statistical tests to explore correlations between crime rates, home values, and police station proximity."
     },
     {
-        "title": "Analysis",
-        "year": "2023",
-        "image": "",
-        "description": ""
+        "title": "Bikewatching in Boston",
+        "year": "2025",
+        "image": "bikewatching.png",
+        "description": "An interactive geospatial visualization of bike traffic in Boston, built with D3 and Mapbox. This project allows users to explore bike station activity through scrolling and zooming, with circle sizes representing traffic volume at each station. Color coding indicates whether arrivals or departures dominate at different stations throughout the day.",
+        "url": "https://nisharonn.github.io/bikewatching/"
     },
     {
         "title": "",
